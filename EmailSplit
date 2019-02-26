@@ -1,0 +1,32 @@
+
+/**
+ * This program will prompt a user for an email adress and print out the username and domain on two seperate lines
+ *
+ * @Liam
+ * @2/26
+ */
+import java.util.Scanner;
+public class EmailSplit
+{
+    public static void main(String[] args)
+    {
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("Please Enter Your Email Adress");
+    String EmailAdress= in.nextLine();
+    
+    System.out.println("The length of the Email Adress is " + EmailAdress.length() );
+    
+    System.out.println("The position of @ is "  + EmailAdress.indexOf("@"));
+    //Couldn't figure out to find the postion of the @ without using print lines
+    
+    String Username = EmailAdress.substring(0,EmailAdress.indexOf("@"));
+    
+    String Domain = EmailAdress.substring(EmailAdress.indexOf("@"));
+    
+    System.out.println("The username is "  +  Username);
+    
+    System.out.println("And the domain is "  +  Domain);
+    
+    }
+}
