@@ -11,22 +11,22 @@ public class EmailSplit
     public static void main(String[] args)
     {
     Scanner in = new Scanner(System.in);
-    
+    //prompting the user
     System.out.println("Please Enter Your Email Adress");
-    String EmailAdress= in.nextLine();
+    String emailAddress= in.nextLine();
+    //setting ints
+    int length = emailAddress.length() ;
     
-    int length = (EmailAdress.length() );
+    int loc = emailAddress.indexOf("@");
     
-    int loc = (EmailAdress.indexOf("@"));
+    //finding the @ symbol
+    String username = emailAddress.substring(0,emailAddress.indexOf("@"));
     
+    String domain = emailAddress.substring(loc  +  1);
+    //printing out the final result
+    System.out.println("The username is "  +  username);
     
-    String Username = EmailAdress.substring(0,EmailAdress.indexOf("@"));
-    
-    String Domain = EmailAdress.substring(EmailAdress.indexOf("@"));
-    
-    System.out.println("The username is "  +  Username);
-    
-    System.out.println("And the domain is "  +  Domain);
+    System.out.println("And the domain is "  +  domain);
     
     }
 }
