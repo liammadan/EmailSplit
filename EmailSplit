@@ -15,10 +15,10 @@ public class EmailSplit
     System.out.println("Please Enter Your Email Adress");
     String EmailAdress= in.nextLine();
     
-    System.out.println("The length of the Email Adress is " + EmailAdress.length() );
+    int length = (EmailAdress.length() );
     
-    System.out.println("The position of @ is "  + EmailAdress.indexOf("@"));
-    //Couldn't figure out to find the postion of the @ without using print lines
+    int loc = (EmailAdress.indexOf("@"));
+    
     
     String Username = EmailAdress.substring(0,EmailAdress.indexOf("@"));
     
